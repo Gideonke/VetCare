@@ -1,6 +1,6 @@
 function Nav(){
     return(
-        <div></div>
+        <div> hey</div>
     )
 }
 export default Nav;
