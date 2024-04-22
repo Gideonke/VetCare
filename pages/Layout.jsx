@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import { useState } from "react";
-function Layout() {
+import Nav from "../components/Nav";
+function Layout({children}) {
 
   return (
     <div>
@@ -10,3 +11,4 @@ function Layout() {
     </div>
   );
 }
+export default Layout;
