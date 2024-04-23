@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../../pages/Home.jsx";
+import Home from "../pages/Home.jsx";
 
-import Layout from "../../pages/Layout.jsx";
+import Layout from "../pages/Layout.jsx";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Login from "../../pages/Login.jsx";
-import Register from "../../pages/Register.jsx";
+import Login from "../pages/Login.jsx";
+import Register from "../pages/Register.jsx";
 function Router() {
   return (
     <BrowserRouter>
