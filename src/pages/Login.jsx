@@ -2,9 +2,24 @@ import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaRegEyeSlash } from "react-icons/fa";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+
 
 
 function Login(){
+
+    const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+    
     const [showPassword,setShowPassword]=useState(true)
 function handleShowPassword(){
     setShowPassword(prev=>!prev)
@@ -19,11 +34,11 @@ function handleShowPassword(){
                 <h1 className="text-3xl">Login to your Account</h1>
             </div>
             <div>
-            <input type="addess" placeholder="Enter Address"className="text-1xl border border-gray-400 py-5 px-5   w-[600px] flex-1"/>
+            <input type="addess" placeholder="Enter Address"className="text-1xl border border-gray-400 py-5 px-5  rounded-2xl w-[600px] flex-1 shadow-red-500"/>
             </div>
 
-            <div className="border border-gray-400   w-[600px] flex justify-between items-center  ">
-            <input type={showPassword?"password":"text"} placeholder="Password"className="text-1xl  py-5 px-5 flex-1 bg-transparent "/>
+            <div className="border border-gray-400   w-[600px] flex justify-between items-center rounded-2xl ">
+            <input type={showPassword?"password":"text"} placeholder="Password"className="text-1xl    py-5 px-5 flex-1 bg-transparent "/>
             <div className="pr-3 cursor-pointer"onClick={handleShowPassword}>
             {showPassword?<FaRegEyeSlash/>:<FaEye/>}
            

@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home.jsx";
-
 import Layout from "../pages/Layout.jsx";
-
+import Services from"../pages/Layout.jsx"
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Login from "../pages/Login.jsx";
@@ -35,6 +34,16 @@ function Router() {
             </Layout>
           }
         />
+
+<Route
+          path="/services"
+          element={
+            <Layout>
+              <Services />
+            </Layout>
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   );
