@@ -1,3 +1,5 @@
+
+
 function Booking(){
     return(
         <div className="mt-40 mb-6 bg-green-50 flex justify-center gap-8">

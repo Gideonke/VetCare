@@ -64,6 +64,8 @@ function Signup() {
           />
         </div>
         <div className="flex items-center flex-col gap-10 mt-9">
+        {errorMessage && <p className="text-red-500" >{errorMessage}</p>}
+
           <div className="flex gap-4 ">
             <input
               onChange={handleChange}
@@ -157,7 +159,6 @@ function Signup() {
           <div className="flex items-center cursor-pointer justify-center mb-3">
             Already have An Account? <Link to="/login"><span className="text-green-600">Login</span></Link>
           </div>
-          {errorMessage && <p className="text-red-500" >{errorMessage}</p>}
         </div>
       </div>
     </div>

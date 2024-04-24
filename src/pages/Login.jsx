@@ -27,6 +27,8 @@ function Login() {
         <div>
           <h1 className="text-3xl">Login to your Account</h1>
         </div>
+        {error && <p className="text-red-500">{error}</p>}
+
         <div>
           <input
             type="email"
@@ -75,7 +77,6 @@ function Login() {
         <div className="flex items-center gap-10">
           Don't Have An Account Yet? <Link to="/register"><span className="text-green-600"> Sign Up Free</span></Link>
         </div>
-        {error && <p className="text-red-500">{error}</p>}
       </div>
     </div>
   );
