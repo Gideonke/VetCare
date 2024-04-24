@@ -1,4 +1,4 @@
-function Booking(){
+function Booknow(){
     return(
         <div className="mt-8 bg-green-50 flex justify-center gap-8">
     <div>
@@ -31,4 +31,4 @@ function Booking(){
         </div>
     )
 }
-export default Booking;
+export default Booknow;
