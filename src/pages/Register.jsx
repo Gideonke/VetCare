@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../Firebase";
+import { Link } from "react-router-dom";
 function Signup() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -154,7 +155,7 @@ function Signup() {
             <p>Sign Up With Google</p>
           </div>
           <div className="flex items-center cursor-pointer justify-center mb-3">
-            Already have An Account? <span className="text-green-600">Login</span>
+            Already have An Account? <Link to="/login"><span className="text-green-600">Login</span></Link>
           </div>
           {errorMessage && <p className="text-red-500" >{errorMessage}</p>}
         </div>

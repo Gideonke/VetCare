@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +19,7 @@ function Login() {
     }
   };
   return (
-    <div className="flex gap-10 justify-center mt-14">
+    <div className="flex gap-10 justify-center mt-40">
       <div>
         <img src="src/assets/images/pexels-sam-lion-5733423 (1).jpg" className="w-[800px] h-[90vh]" />
       </div>
@@ -72,7 +73,7 @@ function Login() {
           <p>Continue With Google</p>
         </div>
         <div className="flex items-center gap-10">
-          Don't Have An Account Yet? <span className="text-green-600"> Sign Up Free</span>
+          Don't Have An Account Yet? <Link to="/register"><span className="text-green-600"> Sign Up Free</span></Link>
         </div>
         {error && <p className="text-red-500">{error}</p>}
       </div>

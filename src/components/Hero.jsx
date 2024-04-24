@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <div>
@@ -31,7 +32,7 @@ function Hero() {
 <p className="leading-[2rem]">Our team is a family of passionate, dedicated animal lovers known for our excellent service to the pets and people of Morgantown and the surrounding areas. Our goal is to partner with you to see that your pet has as many happy, healthy years as possible. We do that by focusing on preventive care, providing comprehensive services, and using a customized approach.
 
 </p>
-<button className="bg-blue-600 text-white py-3 px-8 rounded-full text-2xl">Book Now</button>
+<Link to="/booking"><button className="bg-blue-600 text-white py-3 px-8 rounded-full text-2xl">Book Now</button></Link>
       </div>
       </div>
 

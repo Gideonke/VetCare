@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Login from "../pages/Login.jsx";
 import Register from "../pages/Register.jsx";
-import Requestform from "../pages/Booking.jsx";
+import Booking from "../pages/Booking.jsx";
 import Services from "../pages/Services.jsx";
 function Router() {
   return (

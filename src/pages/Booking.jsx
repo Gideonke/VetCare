@@ -1,6 +1,6 @@
 function Booking(){
     return(
-        <div className="mt-8 bg-green-50 flex justify-center gap-8">
+        <div className="mt-40 mb-6 bg-green-50 flex justify-center gap-8">
     <div>
             <div className="text-center flex flex-col gap-4 m-4">
             <p className="text-2xl">Trusted and Amazing Pet Care</p>
