@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home.jsx";
 import Layout from "../pages/Layout.jsx";
-import Services from"../pages/Layout.jsx"
+import Services from"../pages/Services.jsx"
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Booknow from "../pages/Booknow.jsx"
 import Login from "../pages/Login.jsx";
 import Register from "../pages/Register.jsx";
 function Router() {
@@ -40,6 +41,15 @@ function Router() {
           element={
             <Layout>
               <Services />
+            </Layout>
+          }
+        />
+
+<Route
+          path="/booknow"
+          element={
+            <Layout>
+              <Booknow />
             </Layout>
           }
         />
