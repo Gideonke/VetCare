@@ -11,7 +11,7 @@ function Signup() {
     mobileNumber: "",
     password: "",
     confirmPassword: "",
-    userType: "client", // Default value for user type
+    userType: "client",
   });
   const [errorMessage, setErrorMessage] = useState("");
 
