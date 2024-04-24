@@ -5,11 +5,9 @@ function Home(){
  return(
 <div>
    <Hero/>
-   
     <Main/>
-
     <Section/>
 </div>
- )   
+ )
 }
 export default Home;
