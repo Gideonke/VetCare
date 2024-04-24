@@ -1,11 +1,10 @@
 import Footer from "../components/Footer";
 import { useState } from "react";
 import Nav from "../components/Nav";
-function Layout({children}) {
-
+function Layout({ children }) {
   return (
     <div>
-      <Nav/>
+      <Nav />
       <main className="flex min-h-[100vh] flex-col ">{children}</main>
       <Footer />
     </div>

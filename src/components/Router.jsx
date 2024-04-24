@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Login from "../pages/Login.jsx";
 import Register from "../pages/Register.jsx";
+import Requestform from "../pages/Booking.jsx";
+import Services from "../pages/Services.jsx";
 function Router() {
   return (
     <BrowserRouter>
@@ -24,6 +26,24 @@ function Router() {
           element={
             <Layout>
               <Home />
+            </Layout>
+          }
+        />
+
+<Route
+          path="/booking"
+          element={
+            <Layout>
+              <Booking />
+            </Layout>
+          }
+        />
+
+<Route
+          path="/services"
+          element={
+            <Layout>
+              <Services/>
             </Layout>
           }
         />
