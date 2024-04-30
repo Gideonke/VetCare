@@ -32,7 +32,7 @@ function Section(){
             <h1 className="text-blue-600 text-2xl text-center">Trustworthy Veterinary<br/> Services</h1>
         </div>
         <div><p className="w-[300px] text-center leading-[2rem]">Professional pet care, trustworthy veterinary services, clean facility, & very friendly staff.</p></div>
-        <div>            <h1 className="text-blue-600 text-2xl">Chasity Jacobs
+        <div>            <h1 className="text-blue-600 text-2xl">Steven Mwas
 </h1>
 </div>
     </div>
@@ -51,7 +51,7 @@ function Section(){
 </h1>
       </div>
       <div><p className="w-[300px] text-center leading-[2rem]">I always get the best care for my fur babies. You're all polite and professional. I really appreciate all of you.</p></div>
-      <div><h1 className="text-blue-600 text-2xl">Tonya Hanson</h1>
+      <div><h1 className="text-blue-600 text-2xl">Gideon KE</h1>
 </div>
   </div>
   <div className="w-[400px] h-[50vh] bg-white mt-20 flex flex-col items-center justify-center gap-12 rounded-2xl">
@@ -68,7 +68,7 @@ function Section(){
             <h1 className="text-blue-600 text-2xl text-center">They Saved Our Dog Porter's<br/> Life</h1>
         </div>
         <div><p className="w-[300px] text-center leading-[2rem]">They saved our dog Porter’s life. Great staff. Thank you so much for taking such good care of him!</p></div>
-        <div><h1 className="text-blue-600 text-2xl">Abby Kendall</h1>
+        <div><h1 className="text-blue-600 text-2xl">Aspen Gie</h1>
 </div>
     </div>
 

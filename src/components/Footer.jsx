@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer(){
     return(
-        <div className="bg-green-200 h-[20vh] flex items-center font-medium justify-between" >
+        <div className="bg-green-200 h-[20vh] flex items-center font-medium justify-between">
 <img className="w-[200px] decoration-white" src="src/assets/images/Blue_Abstract_Animal_Vet_Clinic_Logo-removebg-preview.png"/>
             <div className="flex gap-[30em]">
                 <ul>

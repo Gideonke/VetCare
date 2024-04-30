@@ -11,9 +11,9 @@ function Nav(){
                 <div>
                     <ul className="flex gap-8  text-blue-600 cursor-pointer">
                        <Link to="/"> <li>Home</li></Link>
+                       <Link to="/services"> <li>Services</li></Link>
                        <Link to="/register"><li>Sign Up</li></Link> 
                       <Link to="/login"> <li>Login</li></Link> 
-                       <Link to="/services"> <li>Services</li></Link>
                     </ul>
                 </div>
                 <div className="flex gap-5">
