@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { collection, addDoc } from "firebase/firestore"; 
+
+import { auth,db } from "../../firebase";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -43,21 +45,36 @@ function Signup() {
     
       return;
     }
+    else if( formData.password.length<6){
+      setErrorMessage("the minimum length must have 6 characters");
+return;
+    }
 
     try {
-      const userCredential = await createUserWithEmailAndPassword(
+      const userCredential =  createUserWithEmailAndPassword(
         auth,
         formData.email,
         formData.password
       );
       const user = userCredential.user;
       console.log(user);
+      if(user){
+        const details=  await addDoc(collection(db, "users"), formData)
+
+        console.log(details)
+      }
+      
+
       alert("Successfully Registered");
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error(errorCode, errorMessage);
     }
+
+
+
+
   };
 
   return (
@@ -147,7 +164,7 @@ function Signup() {
               <p>Register as Veterinary</p>
             </div>
           </div>
-
+          {errorMessage && <p className="text-red-500" >{errorMessage}</p>}
           <button
             onClick={handleRegister}
             className="bg-blue-600 py-4 px-[6em] rounded-full text-white"
@@ -159,7 +176,7 @@ function Signup() {
             <div>or</div>
             <div className="border-b-2 border-gray-700 w-[300px]"></div>
           </div>
-
+        
           <div className="text-2xl border cursor-pointer border-gray-400 py-4 px-20  rounded-full flex items-center gap-6 text-blue-800 justify-center">
             <FcGoogle size={40} />
             <p>Sign Up With Google</p>
@@ -167,7 +184,7 @@ function Signup() {
           <div className="flex items-center cursor-pointer justify-center mb-3">
             Already have An Account? <span className="text-green-600">Login</span>
           </div>
-          {errorMessage && <p className="text-red-500" >{errorMessage}</p>}
+         
         </div>
       </div>
     </div>
