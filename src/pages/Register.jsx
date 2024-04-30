@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore"; 
+import { useNavigate } from "react-router-dom";
 
 import { auth,db } from "../../firebase";
 
 function Signup() {
+const navigate=useNavigate()
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -58,10 +61,13 @@ return;
       );
       const user = userCredential.user;
       console.log(user);
+      navigate("/login")
+
       if(user){
         const details=  await addDoc(collection(db, "users"), formData)
 
         console.log(details)
+
       }
       
 
