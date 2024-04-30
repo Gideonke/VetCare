@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Login() {
+  const auth = getAuth();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
 
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -15,11 +19,23 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (email === 'validEmail' && password === 'validPassword') {
-      console.log('Logged in successfully');
-    } else {
-      setError('Invalid email or password');
-    }
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert("Logged in successfully");
+        navigate("/services");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        let errorMessage = "An error occurred. Please try again.";
+        if (errorCode === "auth/user-not-found") {
+          errorMessage = "User not found. Please check your email.";
+        } else if (errorCode === "auth/wrong-password") {
+          errorMessage = "Incorrect password. Please try again.";
+        }
+        setError(errorMessage);
+      });
   };
 
   return (
@@ -62,8 +78,9 @@ function Login() {
             <p className="text-[#45c9a1]">Forgot Password ?</p>
           </div>
         </div>
+        {error && <p className="text-red-500">{error}</p>}
 
-        <button
+      <button
           onClick={handleLogin}
           className="text-2xl border border-gray-400 py-4 px-30 rounded-full flex items-center gap-6 text-white bg-blue-600 justify-center"
         >
@@ -81,13 +98,13 @@ function Login() {
         <div className="flex items-center gap-10">
           Don't Have An Account Yet? <span className="text-green-600"> Sign Up Free</span>
         </div>
-        {error && <p className="text-red-500">{error}</p>}
       </div>
     </div>
   );
 }
 
 export default Login;
+
 
 
  
