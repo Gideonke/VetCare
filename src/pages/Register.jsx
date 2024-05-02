@@ -16,7 +16,7 @@ const navigate=useNavigate()
     mobileNumber: "",
     password: "",
     confirmPassword: "",
-    userType: "client",
+    userType: "client,vetirinary",
   });
   const [errorMessage, setErrorMessage] = useState("");
 
