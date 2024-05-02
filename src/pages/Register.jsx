@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../Firebase";
+import { auth } from "../Firebase";
 import { Link } from "react-router-dom";
 function Signup() {
 const navigate=useNavigate()
