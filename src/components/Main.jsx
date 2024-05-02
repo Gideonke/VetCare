@@ -1,5 +1,7 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 function Main(){
     return(
         <div className="">
@@ -60,8 +62,9 @@ Available</h1>
 <p className="text-blue-600 bg-green-50 px-4 py-3 w-[200px]">MEET YOUR DOCTOR
 </p>
 <h2 className="text-blue-600 text-4xl">We’re All About Smiling Faces & Wagging Tails
-</h2>
-<button className="bg-blue-600 text-white py-3 px-8 rounded-full text-2xl w-[300px]">Book Now</button>
+</h2> 
+<Link to="booking"><button className="bg-blue-600 text-white py-3 px-8 rounded-full text-2xl w-[300px]">Book Now</button></Link>
+
 </div>
 <div>
     <img src="src/assets/images/pexels-bin-ziegler-588438-1364756-removebg-preview.png" width={350}/>
