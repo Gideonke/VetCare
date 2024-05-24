@@ -2,22 +2,21 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 function Footer(){
     return(
-        <div className="bg-green-300 h-[20vh] flex items-center font-medium justify-between" >
+        <div className="bg-green-200 h-[20vh] flex items-center font-medium justify-between" >
 <img className="w-[200px] decoration-white" src="src/assets/images/Blue_Abstract_Animal_Vet_Clinic_Logo-removebg-preview.png"/>
 
             <div className="flex gap-[30em]">
                 <ul>
-                    <li className="mb-2 mt-3">Home</li>
-                    <li className="mb-2">Sighn up</li>
-                    <li className="mb-2">Log in</li>
-
+                   <Link to="/"> <li className="mb-2 mt-3">Home</li></Link>
+                  <Link to="/register">  <li className="mb-2">Sighn up</li></Link>
+                  <Link to ="/login">  <li className="mb-2">Log in</li></Link>
                 </ul>
                 <ul  >
                     <h1 className="mb-2" >contact</h1>
                     <div className="flex  items-center mb-2 gap-3 ">
-
                 <FaPhoneAlt />
                     <li>254-700-333-333</li>
                     </div  >

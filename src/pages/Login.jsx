@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 function Login() {
   const auth = getAuth();
@@ -39,7 +37,7 @@ function Login() {
   };
 
   return (
-    <div className="flex gap-10 justify-center mt-14">
+    <div className="flex gap-10 justify-center mt-40">
       <div>
         <img src="src/assets/images/pexels-sam-lion-5733423 (1).jpg" className="w-[800px] h-[90vh]" />
       </div>
@@ -96,7 +94,7 @@ function Login() {
           <p>Continue With Google</p>
         </div>
         <div className="flex items-center gap-10">
-          Don't Have An Account Yet? <span className="text-green-600"> Sign Up Free</span>
+          Don't Have An Account Yet? <Link to="/register"><span className="text-green-600"> Sign Up Free</span></Link>
         </div>
       </div>
     </div>
